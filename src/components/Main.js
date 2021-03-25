@@ -1,6 +1,6 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts'
-import { CardDeck } from 'react-bootstrap';
+import CardDeck from 'react-bootstrap/CardDeck';
 import animalArray from '../data.json'
 
 
@@ -17,6 +17,7 @@ class Main extends React.Component{
                         horns={animal.horns}
                     />
                 ))}
+                
             </CardDeck>
         )
     }

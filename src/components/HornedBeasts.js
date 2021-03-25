@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardDeck} from 'react-bootstrap';
-import { AiFillLike } from 'react-icons/ai';
+import { AiFillLike } from 'react-icons/ai'
 
 class HornedBeasts extends React.Component{
     constructor(props) {
@@ -17,8 +17,7 @@ class HornedBeasts extends React.Component{
     render () {
         return(
             <CardDeck>
-                <Card 
-                // style={{ width: '16rem' }}
+                <Card className='card'
                 onClick={this.numOfClicks}>
                     <Card.Img variant="top" src={this.props.imgUrl} />
                     <Card.Body>
