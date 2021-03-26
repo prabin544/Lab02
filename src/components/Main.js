@@ -1,13 +1,13 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts'
-import CardDeck from 'react-bootstrap/CardDeck';
+import CardColumns from 'react-bootstrap/CardColumns';
 import animalArray from '../data.json'
 
 
 class Main extends React.Component{
     render () {
         return(
-            <CardDeck>
+            <CardColumns>
                 {animalArray.map(animal=>(
                     <HornedBeasts  
                         title = {animal.title} 
@@ -17,8 +17,7 @@ class Main extends React.Component{
                         horns={animal.horns}
                     />
                 ))}
-                
-            </CardDeck>
+            </CardColumns>
         )
     }
 }

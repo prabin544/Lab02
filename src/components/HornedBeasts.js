@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardDeck} from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import { AiFillLike } from 'react-icons/ai'
 
 class HornedBeasts extends React.Component{
@@ -16,19 +17,14 @@ class HornedBeasts extends React.Component{
 
     render () {
         return(
-            <CardDeck>
-                <Card className='card'
-                onClick={this.numOfClicks}>
-                    <Card.Img variant="top" src={this.props.imgUrl} />
-                    <Card.Body>
+            <Card style={{ width: '30rem'}}>
+                <Card.Img variant="top" src={this.props.imgUrl} style={{ width: '100%'}} />
+                <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>{this.props.description}</Card.Text>
-                    </Card.Body>
-                    <Card.Footer>
-                    <AiFillLike />  {this.state.favoriteBeasts}
-                    </Card.Footer>
-                </Card>
-            </CardDeck>
+                    <Button variant="primary" onClick={this.numOfClicks}><AiFillLike />{this.state.favoriteBeasts}</Button>
+                </Card.Body>
+            </Card>
         );
     }
 }
